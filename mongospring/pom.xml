@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gurps.mongospring</groupId>
+  <artifactId>mongospring</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>Mongo Spring integration</description>
+  
+  <build>
+	<plugins>
+		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>			
+			<configuration>
+				<source>1.6</source>
+				<target>1.6</target>
+			</configuration>
+		</plugin>
+		<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+	</plugins>
+     </build>
+  
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.0.0.RC3</version>
+  </parent>
+
+  
+  <dependencies>
+      <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        
+      <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-jpa</artifactId>
+        
+    </dependency>
+        
+    <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-mongodb</artifactId>        
+    </dependency>
+    
+</dependencies>
+
+  <properties>
+        <start-class>com.gurps.mongo.main.Main</start-class>
+    </properties>
+    
+    
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>http://repo.spring.io/libs-milestone</url>
+        </repository>
+    </repositories>
+    
+  <pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>http://repo.spring.io/libs-milestone</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
